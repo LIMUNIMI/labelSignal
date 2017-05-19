@@ -1,5 +1,6 @@
 # labelSignal
-`labelSignal`: Automatic annotation of timbre variation for monophonic musical instruments
+
+`labelSignal`: Automatic annotation of timbre variation for monophonic musical instruments.
 
 ## Examples
 
@@ -11,9 +12,9 @@ It has been tested on Matlab R2015a + DSP Toolbox, but it should work even with 
 
 ## Repo content
 
-`labelSignal.m` is the main function. This does all the work.
-
 `lib` contains routines used by the main function.
+
+`labelSignal.m` is the main function. This does all the work.
 
 `example.m` script is a good starting point to learn how to use `labelSignal.m`.
 
@@ -21,7 +22,7 @@ It has been tested on Matlab R2015a + DSP Toolbox, but it should work even with 
 
 `Khomus.wav` is some audio used by the sample scripts.
 
-`README.md`: this file.
+`README.md` is this file.
 
 ## How to reference this work
 
