@@ -47,7 +47,7 @@
 %% Parameters
 
     % Add lib folder to path
-    addpath('lib');
+    addpath(genpath('lib'));
 
     % Global parameters
     inputFile  = 'khomus.wav';

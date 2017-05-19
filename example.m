@@ -37,7 +37,7 @@
     clear;
     
     % Add lib folder to path
-    addpath('lib');
+    addpath(genpath('lib'));
 
 %% Parameters (defaults are commented)
     % General settings:
