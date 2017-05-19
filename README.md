@@ -23,6 +23,11 @@ It has been tested on Matlab R2015a + DSP Toolbox, but it should work even with 
 
 `inDepthExample.m` script is a good starting point to learn how `labelSignal.m` works.
 
+### Other files
+`Khomus.wav`: Audio file used by the sample scripts.
+
+`README.md`: this file.
+
 ## How to reference this work
 
 This work is being reviewed...
