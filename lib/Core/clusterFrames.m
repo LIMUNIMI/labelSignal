@@ -1,10 +1,11 @@
-function [ clusters ] = clusterFrames( cc, nOfCluster )
+function [ clusters, tree ] = clusterFrames( cc, nOfCluster, method )
 %[ clusters ] = clusterFrames( cc, nOfCluster )
 %
 % INPUT
 %          cc: Cepstral coefficients of each frame
 %  nOfCluster: # of cluster (audio classes)
-% 
+%      method: Hierarchical clustering method (default = 'complete')
+%
 % OUTPUT
 %    clusters: Cluster index for each frame
 %
@@ -32,9 +33,8 @@ function [ clusters ] = clusterFrames( cc, nOfCluster )
 % along with this program.  If not, see <http://www.gnu.org/licenses/>
 %
 
-    tree = linkage(cc,'ward');
-    % figure
-    % [~, cluster] = dendrogram(tree,nOfCluster);
+    if nargin < 3, method = 'complete'; end
+    tree = linkage(cc,method);
     clusters = cluster(tree,'MAXCLUST',nOfCluster) ;
 
 end

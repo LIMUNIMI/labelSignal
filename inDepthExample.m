@@ -67,7 +67,8 @@
     
     % Clustering
     nOfCluster = 25;       % # of cluster (audio classes)
-
+    cDistance  = 'ward';   % Hierarchical cluster distance method
+    
 %% 1. Preprocess input to uniform the dataset
     
     % Load file
@@ -96,7 +97,7 @@
     % Cluster frames based on extracted features
     % [from now on you can put together features from multiple files 
     % to make them share the same subspace (i.e compatible labels)]
-    clusters = clusterFrames( cc, nOfCluster );
+    clusters = clusterFrames( cc, nOfCluster, cDistance );
     
     % Tag clusters based on centroid features
     [ labels, ~ ] = centroidBasedLabelling( AR, clusters );

@@ -58,7 +58,7 @@ function [ buffered, envel, Fs ] = preprocessing( x, Fs, targetFs, windowSize, p
     
     % Split input in frames
     wSize = round( windowSize * Fs);
-    overlap    = 1/2 * wSize;
+    overlap    = (1/2 * wSize);
     buffered   = buffer( x, wSize, overlap );
 
     % L2 Normalization of each frame
