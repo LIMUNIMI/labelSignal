@@ -4,7 +4,7 @@
 
 ## Examples
 
-You can find some output examples [here](http://www.lim.di.unimi.it/demo_timbre.php).
+You can find some output examples [here](http://lim.di.unimi.it/demo/label_signal.php).
 
 ## Requirements
 
@@ -26,7 +26,7 @@ It has been tested on Matlab R2015a + DSP Toolbox, but it should work even with 
 
 ## How to reference this work
 
-This work is being reviewed...
+This work has been accepted at the 13th International Symposium on Computer Music Multidisciplinary Research (CMMR 2017)
 
 ## License
 
