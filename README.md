@@ -1,6 +1,6 @@
 # labelSignal
 
-`labelSignal`: Automatic annotation of timbre variation for monophonic musical instruments.
+`labelSignal`: Automatic annotation of timbre variation for monophonic musical instruments and other sound sources.
 
 ## Examples
 
