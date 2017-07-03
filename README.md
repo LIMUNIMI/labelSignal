@@ -4,7 +4,7 @@
 
 ## Examples
 
-You can find some output examples [here](http://lim.di.unimi.it/demo/label_signal.php).
+You can find some output examples [here](http://lim.di.unimi.it/demo/labelSignal.php).
 
 ## Requirements
 
