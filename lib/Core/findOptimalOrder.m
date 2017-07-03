@@ -41,6 +41,7 @@ function [ selected ] = findOptimalOrder( buffered, maxorder, fToExplain, LPCfun
     [ MDL, ~ ] = getMDL( buffered, maxorder, LPCfun );
     [ ~, idealOrders ] = min( MDL );
     selected = prctile(idealOrders, fToExplain);
+    selected = round(selected);
     
     if nargin > 4,
         % Minimum Description Length
