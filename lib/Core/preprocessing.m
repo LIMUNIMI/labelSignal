@@ -21,7 +21,7 @@ function [ buffered, envel, Fs ] = preprocessing( x, Fs, targetFs, windowSize, p
 % AUTOMATIC ANNOTATION OF TIMBRE VARIATION
 % FOR MONOPHONIC MUSICAL INSTRUMENTS
 % Goffredo Haus, Luca A. Ludovico, and Giorgio Presti
-% {haus,ludovico,presti}@unimi.it
+% {goffredo.haus,luca.ludovico,giorgio.presti}@unimi.it
 %
 % preprocessing.m: preprocessing routine
 % Copyright (C) 2017 - Laboratorio di Informatica Musicale

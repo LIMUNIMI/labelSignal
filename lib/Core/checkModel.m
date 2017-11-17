@@ -14,7 +14,7 @@ function [ ] = checkModel( buffered, ar, Fs, refF0 )
 % AUTOMATIC ANNOTATION OF TIMBRE VARIATION
 % FOR MONOPHONIC MUSICAL INSTRUMENTS
 % Goffredo Haus, Luca A. Ludovico, and Giorgio Presti
-% {haus,ludovico,presti}@unimi.it
+% {goffredo.haus,luca.ludovico,giorgio.presti}@unimi.it
 %
 % checkModel.m: Plots to visually check if data is modeled correctly
 % Copyright (C) 2017 - Laboratorio di Informatica Musicale

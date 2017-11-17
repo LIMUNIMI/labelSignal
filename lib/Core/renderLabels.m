@@ -18,7 +18,7 @@ function [ ] = renderLabels( buffered, Fs, envel, labels, clusters, outputVideo,
 % AUTOMATIC ANNOTATION OF TIMBRE VARIATION
 % FOR MONOPHONIC MUSICAL INSTRUMENTS
 % Goffredo Haus, Luca A. Ludovico, and Giorgio Presti
-% {haus,ludovico,presti}@unimi.it
+% {goffredo.haus,luca.ludovico,giorgio.presti}@unimi.it
 %
 % renderLabels.m: visualize labels as colours
 % Copyright (C) 2017 - Laboratorio di Informatica Musicale

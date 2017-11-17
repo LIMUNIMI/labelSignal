@@ -16,7 +16,7 @@ function [ cc, AR ] = extractFeature( ar, ccToKeep, nBins, Fs )
 % AUTOMATIC ANNOTATION OF TIMBRE VARIATION
 % FOR MONOPHONIC MUSICAL INSTRUMENTS
 % Goffredo Haus, Luca A. Ludovico, and Giorgio Presti
-% {haus,ludovico,presti}@unimi.it
+% {goffredo.haus,luca.ludovico,giorgio.presti}@unimi.it
 %
 % extractFeature.m: cepstral coeff. and frequency response of ar models
 % Copyright (C) 2017 - Laboratorio di Informatica Musicale

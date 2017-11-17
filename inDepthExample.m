@@ -3,7 +3,7 @@
 % AUTOMATIC ANNOTATION OF TIMBRE VARIATION             %
 % FOR MONOPHONIC MUSICAL INSTRUMENTS                   %
 % Goffredo Haus, Luca A. Ludovico, and Giorgio Presti  %
-% {haus,ludovico,presti}@unimi.it                      %
+% {goffredo.haus,luca.ludovico,giorgio.presti}@unimi.it                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % inDepthExample.m: step-by-step description of a signal through labels

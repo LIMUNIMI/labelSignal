@@ -44,7 +44,7 @@ function [ labels, clusters, centroids, T ] = labelSignal( x, Fs, s )
 % AUTOMATIC ANNOTATION OF TIMBRE VARIATION
 % FOR MONOPHONIC MUSICAL INSTRUMENTS
 % Goffredo Haus, Luca A. Ludovico, and Giorgio Presti
-% {haus,ludovico,presti}@unimi.it
+% {goffredo.haus,luca.ludovico,giorgio.presti}@unimi.it
 %
 % labelSignal.m: describes a signal through a time serie of labels
 % Copyright (C) 2017 - Laboratorio di Informatica Musicale

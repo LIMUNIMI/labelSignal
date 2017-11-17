@@ -17,7 +17,7 @@ function [ selected ] = findOptimalOrder( buffered, maxorder, fToExplain, LPCfun
 % AUTOMATIC ANNOTATION OF TIMBRE VARIATION
 % FOR MONOPHONIC MUSICAL INSTRUMENTS
 % Goffredo Haus, Luca A. Ludovico, and Giorgio Presti
-% {haus,ludovico,presti}@unimi.it
+% {goffredo.haus,luca.ludovico,giorgio.presti}@unimi.it
 %
 % findOptimalOrder.m: Autmatically chooses order based on MDL
 % Copyright (C) 2017 - Laboratorio di Informatica Musicale
