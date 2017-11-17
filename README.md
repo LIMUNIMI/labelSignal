@@ -26,7 +26,7 @@ It has been tested on Matlab R2015a + DSP Toolbox, but it should work even with 
 
 ## How to reference this work
 
-This work has been accepted at the 13th International Symposium on Computer Music Multidisciplinary Research (CMMR 2017)
+Haus, G., Ludovico, L. A., & Presti, G. (2017). Automatic Annotation of Timbre Variation for Musical Instruments. In Computer Music Multidisciplinary Research (pp. 493-504). Les éditions de PRISM.
 
 ## License
 
