@@ -9,13 +9,13 @@
 % LABORATORIO DI INFORMATICA MUSICALE
 % Dipartimento di Informatica "Giovanni Degli Antoni"
 % Università degli Studi di Milano
-% Via Comelico, 39 - 20135 Milano (Italy)
+% Via Celoria, 18 - 20133 Milano (Italy)
 
 % EXAMPLE OF USE OF labelSignal() FUNCTION
 % For more details see function help or
 % take a look to inDepthExample.m
 
-% examle.m: describes a signal through a time serie of labels
+% example.m: describes a signal through a time serie of labels
 % Copyright (C) 2017 - Laboratorio di Informatica Musicale
 % 
 % This program is free software: you can redistribute it and/or modify
