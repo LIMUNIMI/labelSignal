@@ -25,7 +25,9 @@ function [STFT, F, T] = getSTFT(buffered,overlap,Fs)
     F = linspace(0,Fs/2,1+windowSize/2)';
     
     STFT = fft(buffered);
-    STFT = STFT(1:end/2+1,:);
+    nbin = size(STFT,1);
+    nbin = 0.5 * (nbin + mod(nbin,2)) + 1 - mod(nbin,2);
+    STFT = STFT(1:nbin,:);
     STFT = abs(STFT)/windowSize;
     STFT(2:end-1,:) = STFT(2:end-1,:) * 2; 
         

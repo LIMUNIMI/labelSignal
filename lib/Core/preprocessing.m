@@ -40,7 +40,7 @@ function [ buffered, envel, Fs ] = preprocessing( x, Fs, targetFs, windowSize, p
 % along with this program.  If not, see <http://www.gnu.org/licenses/>
 %
 
-    if nargin < 5, prefilter = 1; end;
+    if nargin < 5, prefilter = 1; end
 
     % Discard stereophonic information
     x = mean( x, 2 );
@@ -58,7 +58,7 @@ function [ buffered, envel, Fs ] = preprocessing( x, Fs, targetFs, windowSize, p
     
     % Split input in frames
     wSize = round( windowSize * Fs);
-    overlap    = (1/2 * wSize);
+    overlap    = round(1/2 * wSize);
     buffered   = buffer( x, wSize, overlap );
 
     % L2 Normalization of each frame

@@ -66,53 +66,53 @@ function [ labels, clusters, centroids, T ] = labelSignal( x, Fs, s )
 %% Parameters defaults
 
     % General settings
-    if ~isfield(s, 'plot'),       s.plot       = false;      end;
-    if ~isfield(s, 'visualize'),  s.visualize  = false;      end;
-    if ~isfield(s, 'videoFile'),  s.videoFile  = '';         end;
-    if ~isfield(s, 'videoRes'),   s.videoRes   = [640,360];  end;
+    if ~isfield(s, 'plot'),       s.plot       = false;      end
+    if ~isfield(s, 'visualize'),  s.visualize  = false;      end
+    if ~isfield(s, 'videoFile'),  s.videoFile  = '';         end
+    if ~isfield(s, 'videoRes'),   s.videoRes   = [640,360];  end
 
     % Preprocessing
-    if ~isfield(s, 'targetFs'),   s.targetFs   = 11025;      end;
-    if ~isfield(s, 'windowSize'), s.windowSize = 0.02321;    end;
-    if ~isfield(s, 'prefilter'),  s.prefilter  = 1;          end;
+    if ~isfield(s, 'targetFs'),   s.targetFs   = 11025;      end
+    if ~isfield(s, 'windowSize'), s.windowSize = 0.02321;    end
+    if ~isfield(s, 'prefilter'),  s.prefilter  = 1;          end
     
     % Order finder
-    if ~isfield(s, 'order'),      s.order      = 0;          end; 
-    if ~isfield(s, 'maxorder'),   s.maxorder   = 30;         end;
-    if ~isfield(s, 'fToExplain'), s.fToExplain = 95;         end;
-    if ~isfield(s, 'LPCfun'),     s.LPCfun     = @aryule;    end;
-    if ~isfield(s, 'f0'),         s.f0         = NaN;        end;
+    if ~isfield(s, 'order'),      s.order      = 0;          end
+    if ~isfield(s, 'maxorder'),   s.maxorder   = 30;         end
+    if ~isfield(s, 'fToExplain'), s.fToExplain = 95;         end
+    if ~isfield(s, 'LPCfun'),     s.LPCfun     = @aryule;    end
+    if ~isfield(s, 'f0'),         s.f0         = NaN;        end
     
     % Features extraction
-    if ~isfield(s, 'ccToKeep'),   s.ccToKeep   = 11;         end;
+    if ~isfield(s, 'ccToKeep'),   s.ccToKeep   = 11;         end
     
     % Clustering
-    if ~isfield(s, 'nOfCluster'), s.nOfCluster = 25;         end;
-    if ~isfield(s, 'cDistance'),  s.cDistance  = 'complete'; end;
+    if ~isfield(s, 'nOfCluster'), s.nOfCluster = 25;         end
+    if ~isfield(s, 'cDistance'),  s.cDistance  = 'complete'; end
 
 %% Compute features and labels
 %  (see 'inDepthExample.m' for the explanation of the following code)
 
     [buffered, envel, Fs] = preprocessing( x, Fs, s.targetFs, s.windowSize, s.prefilter );
-    if (s.order == 0),
-        if (s.plot),
+    if (s.order == 0)
+        if (s.plot)
             s.order = findOptimalOrder( buffered, s.maxorder, s.fToExplain, s.LPCfun, envel, Fs );
         else
             s.order = findOptimalOrder( buffered, s.maxorder, s.fToExplain, s.LPCfun );
-        end;
-    end;
+        end
+    end
     ar = s.LPCfun(buffered, s.order).';
-    if (s.plot), checkModel( buffered, ar, Fs, s.f0 ); end;
-    nBins  = 1 + size(buffered,1)/2;
+    if (s.plot), checkModel( buffered, ar, Fs, s.f0 ); end
+    nBins  = 1 + floor(size(buffered,1)/2);
     [ cc, AR ] = extractFeature( ar, s.ccToKeep, nBins, Fs );
     [clusters, tree] = clusterFrames( cc, s.nOfCluster, s.cDistance );
     [ labels, centroids ] = centroidBasedLabelling( AR, clusters );
-    if (s.plot),
+    if (s.plot)
         figure, plotDendrogram( tree, s.nOfCluster );
-    end;
-    if (s.visualize),
+    end
+    if (s.visualize)
         renderLabels( buffered, Fs, envel, labels, clusters, s.videoFile, s.videoRes );
-    end;
+    end
     T = getFramesTiming( size(buffered), size(buffered,1)/2, Fs );
     
 end

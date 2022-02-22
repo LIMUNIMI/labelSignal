@@ -37,7 +37,7 @@ function [ ] = renderLabels( buffered, Fs, envel, labels, clusters, outputVideo,
 % along with this program.  If not, see <http://www.gnu.org/licenses/>
 %
     
-    if nargin < 6, outputVideo = ''; end;
+    if nargin < 6, outputVideo = ''; end
     envel = envel/max(envel);
 
     % Input STFT
@@ -56,9 +56,8 @@ function [ ] = renderLabels( buffered, Fs, envel, labels, clusters, outputVideo,
         
     % Create video
     figure
-    if ~strcmp(outputVideo,''), set(gcf, 'Position', [100, 250, videoSize]); end;
+    if ~strcmp(outputVideo,''), set(gcf, 'Position', [100, 250, videoSize]); end
     plotLabelledFrames(envel,STFT,clusters,col,F,T);
-    if ~strcmp(outputVideo,''), renderVideo( gca, gcf, T(end), outputVideo ); end;
+    if ~strcmp(outputVideo,''), renderVideo( gca, gcf, T(end), outputVideo ); end
 
 end
-
